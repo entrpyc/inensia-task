@@ -15,7 +15,6 @@
   </section>
 
   <script type="module">
-    // I'm using quickSort algorithm because v8 prioritizes it in array sorting methods for numbers
     import { quickSort } from "./js/quickSort/index.js"
     
     const sortButton = document.getElementById('sort-button')
@@ -23,7 +22,8 @@
 
     sortButton.addEventListener('click', () => {
       const numberArray = numbersElement.innerText.split(', ').map(n => Number(n));
-      numbersElement.innerText = quickSort(numberArray).join(', ')
+      quickSort(numberArray)
+      numbersElement.innerText = numberArray.join(', ')
     })
   </script>
 </body>
