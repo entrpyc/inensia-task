@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="styles/task-2.css">
+  <title>Task-2: Sorting</title>
+</head>
+<body>
+  <section id="screen">
+    <div class="container">
+      <h1 id="numbers">33, 103, 3, 726, 200, 984, 198, 764, 9</h1>
+      <button id="sort-button" class="center">SORT</button>
+    </div>
+  </section>
+
+  <script type="module">
+    import { quickSort } from "./js/quickSort/index.js"
+    
+    const sortButton = document.getElementById('sort-button')
+    const numbersElement = document.getElementById('numbers')
+
+    sortButton.addEventListener('click', () => {
+      const numberArray = numbersElement.innerText.split(', ').map(n => Number(n));
+      quickSort(numberArray)
+      numbersElement.innerText = numberArray.join(', ')
+    })
+  </script>
+</body>
+</html>

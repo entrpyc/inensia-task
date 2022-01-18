@@ -5,11 +5,14 @@
   <meta name="robots" content="noindex">
   <meta name="googlebot" content="noindex">
 
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./styles/ui.css">
   <script type="module" src="./js/swapHtmlTagsInDOMElement/index.js"></script>
 
-  <!-- enable/disable demo button -->
-  <script type="module" src="./js/swapHtmlTagsInDOMElement/demo.js"></script>
+  <!-- interface -->
+  <script type="module">
+    import { nextTask } from "./js/ui/index.js"
+    nextTask('./task-2.html')
+  </script>
 
   <!-- Examples -->
   <script type="module">
