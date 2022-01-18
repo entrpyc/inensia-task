@@ -40,4 +40,19 @@ export function nextTask(link) {
 
   container.appendChild(nextPageButton)
   document.body.appendChild(container)
+
+  sourceCode()
+}
+
+export function sourceCode() {
+  const container = document.createElement('div')
+  container.className = 'ui-container top'
+
+  const sourceCodeLink = document.createElement('a')
+  sourceCodeLink.className = 'ui-link'
+  sourceCodeLink.innerText = 'Source code link'
+  sourceCodeLink.href = 'https://github.com/entrpyc/inensia-task'
+
+  container.appendChild(sourceCodeLink)
+  document.body.appendChild(container)
 }
