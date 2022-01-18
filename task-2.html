@@ -5,12 +5,20 @@
   <meta name="robots" content="noindex">
   <meta name="googlebot" content="noindex">
 
+  <link rel="stylesheet" href="./styles/task-2.css">
+
   <title>Task 2</title>
 </head>
 <body>
-  <div class="container">
-    <input type="text" id="input-test-palindrome">
-    <button>Test</button>
-  </div>
+  <section id="screen">
+    <div class="container">
+      <h1 id="title-result">Enter and submit value</h1>
+      <form class="input-wrapper" onsubmit="return false">
+        <input type="text" id="input-test-palindrome" placeholder="Madam">
+        <button type="submit">TEST</button>
+      </fo>
+    </div>
+  </section>
+  <script src="./js/testPalindrome/index.js"></script>
 </body>
 </html>
