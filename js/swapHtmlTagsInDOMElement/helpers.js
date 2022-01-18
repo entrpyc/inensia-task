@@ -18,4 +18,6 @@ export function swapTagName(tag, name) {
   
   // update DOM
   tag.parentNode?.replaceChild(newTag, tag)
+
+  return newTag
 }
