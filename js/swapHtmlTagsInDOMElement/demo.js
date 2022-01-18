@@ -6,7 +6,7 @@ runScriptButton.className = 'run-script-button'
 container.className = 'button-container'
 runScriptButton.innerText = 'Run function'
 runScriptButton.addEventListener("click", () => {
-  const scope = document.body
+  const scope = document.getElementById('row')
   const tagsRename = [
     {
       target: 'p',

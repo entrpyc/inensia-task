@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="./style.css">
   <script type="module" src="./js/swapHtmlTagsInDOMElement/index.js"></script>
 
-  <!-- enable/disable demo -->
+  <!-- enable/disable demo button -->
   <script type="module" src="./js/swapHtmlTagsInDOMElement/demo.js"></script>
 
   <!-- Examples -->
   <script type="module">
     import { swapHtmlTags } from "./js/swapHtmlTagsInDOMElement/index.js"
     // Target DOM element
-    const scope = document.body
+    const scope = document.getElementById('row')
 
     // Array of objects - each describe target tag name and the desired new name
     // This example will swap all "p" tags with "h1" and all "span" tags with "h2"
@@ -30,6 +30,7 @@
       },
     ]
 
+    // Call the function
     // const swappedTagsResult = swapHtmlTags({ scope, tagsRename })
     // console.log(swappedTagsResult)
   </script>
