@@ -5,10 +5,33 @@
   <meta name="robots" content="noindex">
   <meta name="googlebot" content="noindex">
 
-  <!-- <script src="./js/swapHtmlTagsInDOMElement/index.js"></script> -->
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./js/swapHtmlTagsInDOMElement/index.js"></script>
 
-  <script>
-    
+  <!-- enable/disable demo -->
+  <script type="module" src="./js/swapHtmlTagsInDOMElement/demo.js"></script>
+
+  <!-- Examples -->
+  <script type="module">
+    import { swapHtmlTags } from "./js/swapHtmlTagsInDOMElement/index.js"
+    // Target DOM element
+    const scope = document.body
+
+    // Array of objects - each describe target tag name and the desired new name
+    // This example will swap all "p" tags with "h1" and all "span" tags with "h2"
+    const tagsRename = [
+      {
+        target: 'p',
+        newValue: 'h1',
+      },
+      {
+        target: 'span',
+        newValue: 'h2',
+      },
+    ]
+
+    // const swappedTagsResult = swapHtmlTags({ scope, tagsRename })
+    // console.log(swappedTagsResult)
   </script>
 </head>
 
@@ -64,8 +87,6 @@
       <li><a href="#">About</a></li>
     </ul>
   </footer>
-
-  <script type="module" src="./js/swapHtmlTagsInDOMElement/index.js"></script>
 </body>
 
 </html>

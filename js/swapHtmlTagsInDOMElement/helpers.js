@@ -1,3 +1,8 @@
+/**
+ * @param {HTMLElement} el - Target tag
+ * @param {HTMLElement} newEl - New tag
+ * @returns the new tag
+ */
 export function copyAttributes(el, newEl) {
   if(!el.attributes?.length) return
 
@@ -6,14 +11,17 @@ export function copyAttributes(el, newEl) {
   }
 }
 
+/**
+ * @param {HTMLElement} tag - Target tag
+ * @param {string} name - New name
+ * @returns the new tag
+ */
 export function swapTagName(tag, name) {
   // create new element
   const newTag = document.createElement(name)
 
-  // copy innerHTML
+  // copy innerHTML and attributes
   newTag.innerHTML = tag.innerHTML
-
-  // copy attributes
   copyAttributes(tag, newTag)
   
   // update DOM
