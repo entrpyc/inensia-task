@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./styles/task-2.css">
 
   <title>Task 2</title>
+  
 </head>
 <body>
   <section id="screen">
@@ -15,10 +16,26 @@
       <h1 id="title-result">Enter and submit value</h1>
       <form class="input-wrapper" onsubmit="return false">
         <input type="text" id="input-test-palindrome" placeholder="Madam">
-        <button type="submit">TEST</button>
+        <button type="submit">TEST <i>O(n)</i></button>
+        <button type="button" id="lazy">TEST <i>Lazy</i></button>
       </fo>
     </div>
   </section>
-  <script src="./js/testPalindrome/index.js"></script>
+
+  <script type="module">
+    import { testPalindrome, testPalindromeLazySolution } from "./js/testPalindrome/index.js"
+    
+    const form = document.getElementsByTagName('form')[0]
+    const input = document.getElementById('input-test-palindrome')
+    const result = document.getElementById('title-result')
+    const lazySolutionButton = document.getElementById('lazy')
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      testPalindrome(input.value, result)
+    });
+
+    lazySolutionButton.addEventListener('click', () => testPalindromeLazySolution(input.value, result))
+  </script>
 </body>
 </html>

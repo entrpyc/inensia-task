@@ -1,13 +1,7 @@
-const form = document.getElementsByTagName('form')[0]
-const input = document.getElementById('input-test-palindrome')
-const result = document.getElementById('title-result')
+import { normalizeString, resultMessage } from './helpers.js';
 
-form.addEventListener('submit', testPalindrome)
-
-function testPalindrome(e) {
-  e.preventDefault();
-
-  let value = normalizeString(input.value);
+export function testPalindrome(input, result) {
+  let value = normalizeString(input);
   let isPalindrome = true;
 
   const len = value.length;
@@ -25,9 +19,14 @@ function testPalindrome(e) {
   return isPalindrome;
 }
 
-const normalizeString = value => value.normalize().toLowerCase().trim()
+export function testPalindromeLazySolution(input, result) {
+  let value = normalizeString(input);
+  const mirrorString = value.split('').reverse().join('');
 
-const resultMessage = {
-  true: 'The input is a palindrome',
-  false: 'The input is NOT a palindrome',
+  let isPalindrome = mirrorString == value;
+
+  result.className = isPalindrome ? 'green' : 'red'
+  result.innerText = resultMessage[isPalindrome]
+
+  return isPalindrome;
 }

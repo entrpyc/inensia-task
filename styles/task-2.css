@@ -10,6 +10,8 @@ html {
 h1 {
   color: #eee;
   margin-bottom: 1rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .green {
@@ -72,4 +74,20 @@ body {
 .input-wrapper button,
 .input-wrapper input {
   border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .input-wrapper {
+    flex-direction: column;
+  }
+
+  .input-wrapper > * {
+    width: 100%;
+  }
+
+  .input-wrapper button {
+    margin-left: 0px;
+    margin-top: 0.3rem;
+    padding: 1rem;
+  }
 }
