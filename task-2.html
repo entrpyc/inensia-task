@@ -45,6 +45,7 @@
       const isPalindrome = testPalindrome(input.value)
 
       result.className = isPalindrome ? 'green' : 'red'
+      if(isPalindrome === null) result.className = ''
       result.innerText = resultMessage[isPalindrome]
     });
 

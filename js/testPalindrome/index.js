@@ -2,10 +2,12 @@ import { normalizeString } from './helpers.js';
 
 /**
  * @param {string} input 
- * @returns boolean - true if the string is а palindrome
+ * @returns boolean - true if the string is а palindrome, or null if input is not valid
  */
 export function testPalindrome(input) {
   let value = normalizeString(input);
+  if (!value) return null
+
   let isPalindrome = true;
 
   const len = value.length;
