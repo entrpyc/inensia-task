@@ -6,7 +6,7 @@ import { normalizeString } from './helpers.js';
  */
 export function testPalindrome(input) {
   let value = normalizeString(input);
-  if (!value) return null
+  if (!value) return 'not-valid'
 
   let isPalindrome = true;
 

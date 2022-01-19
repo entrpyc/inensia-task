@@ -27,7 +27,7 @@
         <input type="text" id="input-test-palindrome" placeholder="Madam">
         <button class="ui" type="submit">TEST <i>O(n)</i></button>
         <button class="ui" type="button" id="lazy">TEST <i>Lazy</i></button>
-      </fo>
+      </form>
     </div>
   </section>
 
@@ -45,7 +45,7 @@
       const isPalindrome = testPalindrome(input.value)
 
       result.className = isPalindrome ? 'green' : 'red'
-      if(isPalindrome === null) result.className = ''
+      if(isPalindrome === 'not-valid') result.className = ''
       result.innerText = resultMessage[isPalindrome]
     });
 
