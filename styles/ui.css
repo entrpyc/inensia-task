@@ -169,6 +169,12 @@ a#logo-container {
 
 /* Mobile */
 
+@media (max-width: 1366px) {
+  body.raw {
+    padding-bottom: 280px;
+  }
+}
+
 @media (max-width: 480px) {
   .ui-logo {
     display: none;
@@ -180,3 +186,4 @@ a#logo-container {
     max-width: 100%;
   }
 }
+
