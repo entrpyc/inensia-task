@@ -6,7 +6,7 @@
  */
 export function quickSort(arr, startIndex = 0, endIndex = arr.length - 1) {
   if (startIndex >= endIndex) return
-  if (endIndex - startIndex >= 9) permuteMedianOfThree(arr)
+  if (endIndex - startIndex + 1 >= 9) permuteMedianOfThree(arr)
 
   let midIndex = partitionResolver(arr, startIndex, endIndex);
 
@@ -42,4 +42,3 @@ function permuteMedianOfThree(arr) {
   // middle and end index are swapped so we can skip one swap in the partitionResolver
   swap(arr, permute[1], permute[2])
 }
-
