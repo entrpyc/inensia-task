@@ -1,5 +1,4 @@
 /**
- * 
  * @param {string} value 
  * @returns normalized string
  */

@@ -1,9 +1,8 @@
-import { normalizeString, resultMessage } from './helpers.js';
+import { normalizeString } from './helpers.js';
 
 /**
- * 
  * @param {string} input 
- * @returns boolean - true if string is palindrome
+ * @returns boolean - true if the string is а palindrome
  */
 export function testPalindrome(input) {
   let value = normalizeString(input);
@@ -22,9 +21,8 @@ export function testPalindrome(input) {
 }
 
 /**
- * 
  * @param {string} input 
- * @returns boolean - true if string is palindrome
+ * @returns boolean - true if the string is а palindrome
  */
 export const testPalindromeLazySolution = (input) => (
   normalizeString(input).split('').reverse().join('') === normalizeString(input)
