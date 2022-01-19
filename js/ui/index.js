@@ -1,31 +1,5 @@
 import { swapHtmlTags } from '../swapHtmlTagsInDOMElement/index.js';
 
-function task1Demo() {
-  const runScriptButton = document.createElement('button')
-  runScriptButton.className = 'ui-button ui run'
-  runScriptButton.innerText = 'RUN'
-  runScriptButton.addEventListener("click", () => {
-    const scope = document.getElementById('row')
-    const tagsRename = [
-      {
-        target: 'p',
-        newValue: 'h1'
-      },
-      {
-        target: 'span',
-        newValue: 'h2'
-      },
-    ]
-
-    const res = swapHtmlTags({ scope, tagsRename })
-    console.log(res)
-  })
-
-  return runScriptButton
-}
-
-
-
 export function ui({ nextPage, sourceCode, runButton }) {
   const container = document.createElement('div')
   container.className = 'ui-container'
@@ -68,4 +42,28 @@ export function logo() {
   logo.src = './images/inensia-logo.png'
 
   return logo
+}
+
+function task1Demo() {
+  const runScriptButton = document.createElement('button')
+  runScriptButton.className = 'ui-button ui run'
+  runScriptButton.innerText = 'RUN'
+  runScriptButton.addEventListener("click", () => {
+    const scope = document.getElementById('row')
+    const tagsRename = [
+      {
+        target: 'p',
+        newValue: 'h1'
+      },
+      {
+        target: 'span',
+        newValue: 'h2'
+      },
+    ]
+
+    const res = swapHtmlTags({ scope, tagsRename })
+    console.log(res)
+  })
+
+  return runScriptButton
 }

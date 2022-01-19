@@ -1,6 +1,11 @@
 import { normalizeString, resultMessage } from './helpers.js';
 
-export function testPalindrome(input, result) {
+/**
+ * 
+ * @param {string} input 
+ * @returns boolean - true if string is palindrome
+ */
+function testPalindrome(input) {
   let value = normalizeString(input);
   let isPalindrome = true;
 
@@ -13,20 +18,20 @@ export function testPalindrome(input, result) {
     if (value[i] !== value[len - 1 - i]) isPalindrome = false;
   }
 
-
-  result.className = isPalindrome ? 'green' : 'red'
-  result.innerText = resultMessage[isPalindrome]
   return isPalindrome;
 }
 
-export function testPalindromeLazySolution(input, result) {
-  let value = normalizeString(input);
-  const mirrorString = value.split('').reverse().join('');
+/**
+ * 
+ * @param {string} input 
+ * @returns boolean - true if string is palindrome
+ */
+const testPalindromeLazySolution = (input) => (
+  normalizeString(input).split('').reverse().join('') === normalizeString(input)
+)
 
-  let isPalindrome = mirrorString == value;
-
-  result.className = isPalindrome ? 'green' : 'red'
-  result.innerText = resultMessage[isPalindrome]
-
-  return isPalindrome;
+export {
+  resultMessage,
+  testPalindrome,
+  testPalindromeLazySolution,
 }
