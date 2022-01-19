@@ -39,6 +39,7 @@ function permuteMedianOfThree(arr) {
   if (arr[permute[2]] < arr[permute[0]]) swap(arr, permute[2], permute[0])
   if (arr[permute[1]] > arr[permute[2]]) swap(arr, permute[1], permute[2])
 
+  // middle and end index are swapped so we can skip one swap in the partitionResolver
   swap(arr, permute[1], permute[2])
 }
 
