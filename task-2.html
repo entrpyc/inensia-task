@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <title>Task 2: Test palindrome</title>
   <meta name="robots" content="noindex">
   <meta name="googlebot" content="noindex">
+  <meta charset="UTF-8">
 
   <link rel="stylesheet" href="./styles/task-2.css">
   <link rel="stylesheet" href="./styles/ui.css">
 
-  <title>Task 2</title>
 
   <!-- interface -->
   <script type="module">
-    import { nextTask } from "./js/ui/index.js"
-    nextTask('./sorting.html')
+    import { ui } from "./js/ui/index.js"
+    ui({
+      nextPage: './sorting.html',
+      sourceCode: 'https://github.com/entrpyc/inensia-task/blob/main/js/testPalindrome/index.js'
+    })
   </script>
-  
 </head>
 <body>
   <section id="screen">
     <div class="container">
       <h1 id="title-result">Enter and submit value</h1>
-      <form class="input-wrapper" onsubmit="return false">
+      <form class="input-wrapper">
         <input type="text" id="input-test-palindrome" placeholder="Madam">
-        <button type="submit">TEST <i>O(n)</i></button>
-        <button type="button" id="lazy">TEST <i>Lazy</i></button>
+        <button class="ui" type="submit">TEST <i>O(n)</i></button>
+        <button class="ui" type="button" id="lazy">TEST <i>Lazy</i></button>
       </fo>
     </div>
   </section>
 
   <script type="module">
-    import { testPalindrome, testPalindromeLazySolution } from "./js/testPalindrome/index.js"
+    import { testPalindrome, testPalindromeLazySolution, resultMessage } from "./js/testPalindrome/index.js"
     
     const form = document.getElementsByTagName('form')[0]
     const input = document.getElementById('input-test-palindrome')
@@ -39,10 +41,18 @@
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      testPalindrome(input.value, result)
+      const isPalindrome = testPalindrome(input.value)
+
+      result.className = isPalindrome ? 'green' : 'red'
+      result.innerText = resultMessage[isPalindrome]
     });
 
-    lazySolutionButton.addEventListener('click', () => testPalindromeLazySolution(input.value, result))
+    lazySolutionButton.addEventListener('click', () => {
+      const isPalindrome = testPalindromeLazySolution(input.value, result)
+
+      result.className = isPalindrome ? 'green' : 'red'
+      result.innerText = resultMessage[isPalindrome]
+    })
   </script>
 </body>
 </html>

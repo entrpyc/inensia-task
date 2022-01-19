@@ -1,14 +1,4 @@
-html {
-  font-size: 16px;
-}
-
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
 h1 {
-  color: #eee;
   margin-bottom: 1rem;
   font-size: 2rem;
   text-align: center;
@@ -21,30 +11,6 @@ h1 {
 .red {
   color: red;
 }
-
-body {
-  background-color: #111;
-  max-width: 100%;
-}
-
-#screen {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container {
-  max-width: 100%;
-  width: 1280px;
-  padding: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 
 .input-wrapper {
   display: flex;
@@ -60,28 +26,10 @@ body {
 
 button {
   margin-left: 0.5rem;
-  font-size: 1.2rem;
   padding: 0.2rem 1rem;
-  background-color: #fff;
-  border: none;
-  transition: 0.2s ease-in-out;
 }
 
-button:hover {
-  opacity: 0.8;
-}
-
-button,
-.input-wrapper input {
-  border-radius: 5px;
-}
-
-.center {
-  display: block;
-  margin: 1rem auto;
-}
-
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .input-wrapper {
     flex-direction: column;
   }

@@ -4,14 +4,18 @@
   <title>Task 1</title>
   <meta name="robots" content="noindex">
   <meta name="googlebot" content="noindex">
+  <meta charset="UTF-8">
 
   <link rel="stylesheet" href="./styles/ui.css">
-  <script type="module" src="./js/swapHtmlTagsInDOMElement/index.js"></script>
 
   <!-- interface -->
   <script type="module">
-    import { nextTask } from "./js/ui/index.js"
-    nextTask('./task-2.html')
+    import { ui } from "./js/ui/index.js"
+    ui({
+      nextPage: './task-2.html',
+      sourceCode: 'https://github.com/entrpyc/inensia-task/blob/main/js/swapHtmlTagsInDOMElement/index.js',
+      runButton: true,
+    })
   </script>
 
   <!-- Examples -->
@@ -38,8 +42,7 @@
     // console.log(swappedTagsResult)
   </script>
 </head>
-
-<body>
+<body class="raw">
   <h1>Sample page</h1>
   <div id="row">
     <div id="col1">
@@ -92,5 +95,4 @@
     </ul>
   </footer>
 </body>
-
 </html>
