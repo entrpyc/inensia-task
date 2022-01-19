@@ -31,6 +31,7 @@
     const numbersElement = document.getElementById('numbers')
 
     sortButton.addEventListener('click', () => {
+      // parse string to array
       const numberArray = numbersElement.innerText.split(', ').map(n => Number(n));
       quickSort(numberArray)
       numbersElement.innerText = numberArray.join(', ')
