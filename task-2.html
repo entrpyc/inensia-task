@@ -23,7 +23,7 @@
   <section id="screen">
     <div class="container">
       <h1 id="title-result">Enter and submit value</h1>
-      <form class="input-wrapper">
+      <form class="input-wrapper" onsubmit="return false">
         <input type="text" id="input-test-palindrome" placeholder="Madam">
         <button class="ui" type="submit">TEST <i>O(n)</i></button>
         <button class="ui" type="button" id="lazy">TEST <i>Lazy</i></button>
@@ -32,7 +32,8 @@
   </section>
 
   <script type="module">
-    import { testPalindrome, testPalindromeLazySolution, resultMessage } from "./js/testPalindrome/index.js"
+    import { testPalindrome, testPalindromeLazySolution } from "./js/testPalindrome/index.js"
+    import { resultMessage } from "./js/testPalindrome/helpers.js"
     
     const form = document.getElementsByTagName('form')[0]
     const input = document.getElementById('input-test-palindrome')

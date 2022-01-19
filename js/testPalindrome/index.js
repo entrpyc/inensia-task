@@ -5,7 +5,7 @@ import { normalizeString, resultMessage } from './helpers.js';
  * @param {string} input 
  * @returns boolean - true if string is palindrome
  */
-function testPalindrome(input) {
+export function testPalindrome(input) {
   let value = normalizeString(input);
   let isPalindrome = true;
 
@@ -26,12 +26,6 @@ function testPalindrome(input) {
  * @param {string} input 
  * @returns boolean - true if string is palindrome
  */
-const testPalindromeLazySolution = (input) => (
+export const testPalindromeLazySolution = (input) => (
   normalizeString(input).split('').reverse().join('') === normalizeString(input)
 )
-
-export {
-  resultMessage,
-  testPalindrome,
-  testPalindromeLazySolution,
-}

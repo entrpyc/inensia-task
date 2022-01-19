@@ -36,12 +36,18 @@ export function sourceCodeLink(source) {
 }
 
 export function logo() {
+  const link = document.createElement('a')
+  link.id = 'logo-container'
+  link.href = '/'
+
   const logo = document.createElement('img')
   logo.className = 'ui-logo'
   logo.innerText = 'Source code link'
   logo.src = './images/inensia-logo.png'
 
-  return logo
+  link.appendChild(logo)
+
+  return link
 }
 
 function task1Demo() {

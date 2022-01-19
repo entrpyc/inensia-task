@@ -133,6 +133,11 @@ button.ui.run:hover {
 
 /* Custom styles */
 
+a#logo-container {
+  opacity: 1;
+  height: auto;
+}
+
 .center {
   display: block;
   margin: 1rem auto;
