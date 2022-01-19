@@ -12,8 +12,11 @@
 
   <!-- interface -->
   <script type="module">
-    import { nextTask } from "./js/ui/index.js"
-    nextTask('./sorting.html')
+    import { ui } from "./js/ui/index.js"
+    ui({
+      nextPage: './sorting.html',
+      sourceCode: 'https://github.com/entrpyc/inensia-task/blob/main/js/testPalindrome/index.js'
+    })
   </script>
   
 </head>
@@ -23,8 +26,8 @@
       <h1 id="title-result">Enter and submit value</h1>
       <form class="input-wrapper" onsubmit="return false">
         <input type="text" id="input-test-palindrome" placeholder="Madam">
-        <button type="submit">TEST <i>O(n)</i></button>
-        <button type="button" id="lazy">TEST <i>Lazy</i></button>
+        <button class="ui" type="submit">TEST <i>O(n)</i></button>
+        <button class="ui" type="button" id="lazy">TEST <i>Lazy</i></button>
       </fo>
     </div>
   </section>

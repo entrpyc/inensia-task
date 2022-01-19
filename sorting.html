@@ -5,20 +5,21 @@
   
   <title>Task-2: Sorting</title>
   
-  <link rel="stylesheet" href="styles/task-2.css">
   <link rel="stylesheet" href="styles/ui.css">
 
   <!-- interface -->
   <script type="module">
-    import { sourceCode } from "./js/ui/index.js"
-    sourceCode('./sorting.html')
+    import { ui } from "./js/ui/index.js"
+    ui({
+      sourceCode: 'https://github.com/entrpyc/inensia-task/blob/main/js/quickSort/index.js',
+    })
   </script>
 </head>
 <body>
   <section id="screen">
     <div class="container">
       <h1 id="numbers">33, 103, 3, 726, 200, 984, 198, 764, 9</h1>
-      <button id="sort-button" class="center">SORT</button>
+      <button class="ui mt" id="sort-button" class="center">SORT</button>
     </div>
   </section>
 
